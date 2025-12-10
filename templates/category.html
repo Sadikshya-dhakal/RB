@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Dishes - PahiloKhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-utensils text-orange-500 text-3xl"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                        PahiloKhana
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="all-categories.html" class="text-orange-500 font-semibold hover:text-orange-600 transition">
+                        <i class="fas fa-th-large mr-2"></i>Categories
+                    </a>
+                    
+                    <a href="about.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-info-circle mr-2"></i>About
+                    </a>
+                    <a href="contact.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                    <button class="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        <i class="fas fa-user mr-2"></i>Sign In
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-orange-500">Home</a>
+                <a href="all-categories.html" class="block py-2 text-orange-500 font-semibold">Categories</a>
+                <a href="latest-news.html" class="block py-2 text-gray-700 hover:text-orange-500">Latest News</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-orange-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+                <a href="index.html" class="hover:text-orange-500 transition">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="all-categories.html" class="hover:text-orange-500 transition">Categories</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-orange-600 font-semibold">Mountain Dishes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Hero Section -->
+    <section class="bg-gradient-to-br from-blue-600 to-purple-600 py-16 px-4 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Mountain" class="absolute inset-0 w-full h-full object-cover opacity-20">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-white text-center">
+                <div class="text-7xl mb-4">⛰️</div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Mountain Dishes</h1>
+                <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-6">
+                    Explore authentic Himalayan cuisine from high altitude regions including Sherpa, Tibetan-influenced dishes, and mountain specialties.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-lg">
+                    <span class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full">
+                        <i class="fas fa-book mr-2"></i>127 Recipes
+                    </span>
+                    <span class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Himalayan Region
+                    </span>
+                    <span class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full">
+                        <i class="fas fa-star mr-2"></i>4.8 Rating
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Bar -->
+    <section class="max-w-7xl mx-auto px-4 -mt-8 relative z-10">
+        <div class="bg-white rounded-2xl shadow-2xl p-6">
+            <div class="grid md:grid-cols-4 gap-4">
+                <!-- Search -->
+                <div class="md:col-span-2 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Search recipes in this category..." 
+                        class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none"
+                    >
+                </div>
+                <!-- Difficulty Filter -->
+                <select class="px-4 py-3 rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none">
+                    <option>All Difficulty</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+                <!-- Sort By -->
+                <select class="px-4 py-3 rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none">
+                    <option>Sort by: Popular</option>
+                    <option>Sort by: Newest</option>
+                    <option>Sort by: Rating</option>
+                    <option>Sort by: Time</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">All Recipes (127)</h2>
+            <div class="flex gap-2">
+                <button class="p-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="p-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Recipe Card Template - COPY THIS -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <!-- Change image URL -->
+                <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <!-- Change recipe title -->
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <!-- Change description -->
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <!-- Change time and difficulty -->
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>30 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.5</span>
+                    </div>
+                    <!-- Change link -->
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>45 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Hard</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.8</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>25 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Easy</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.6</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 4 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>35 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.7</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 5 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>40 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.9</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>50 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Hard</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>5.0</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 7 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>20 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Easy</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.4</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 8 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Recipe Title Here</h3>
+                    <p class="text-gray-600 text-sm mb-3">Brief description of the recipe goes here...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="far fa-clock mr-1"></i>30 min</span>
+                        <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.7</span>
+                    </div>
+                    <a href="article.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        View Recipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- ADD MORE CARDS BY COPYING THE TEMPLATE -->
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center gap-2 mt-12">
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="px-4 py-2 bg-orange-500 text-white rounded-lg">1</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">2</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">3</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">4</button>
+            <span class="px-4 py-2 text-gray-500">...</span>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">10</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Related Categories -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Explore Related Categories</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="category.html" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 text-center">
+                    <div class="text-6xl mb-4">🏔️</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Hilly Cuisine</h3>
+                    <p class="text-gray-600 text-sm mb-3">189 recipes</p>
+                    <span class="text-orange-600 font-semibold">Explore →</span>
+                </a>
+                <a href="category.html" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 text-center">
+                    <div class="text-6xl mb-4">🌾</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Terai Dishes</h3>
+                    <p class="text-gray-600 text-sm mb-3">156 recipes</p>
+                    <span class="text-orange-600 font-semibold">Explore →</span>
+                </a>
+                <a href="category.html" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 text-center">
+                    <div class="text-6xl mb-4">🏛️</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Ethnic Dishes</h3>
+                    <p class="text-gray-600 text-sm mb-3">112 recipes</p>
+                    <span class="text-orange-600 font-semibold">Explore →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                        <span class="text-2xl font-bold">PahiloKhana</span>
+                    </div>
+                    <p class="text-gray-400">Your ultimate destination for discovering authentic Nepali recipes.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="all-categories.html" class="hover:text-orange-500 transition">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Top Regions</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Mountain Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Hilly Cuisine</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Terai Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Newari Cuisine</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PahiloKhana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

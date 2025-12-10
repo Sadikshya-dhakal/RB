@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - PahiloKhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-utensils text-orange-500 text-3xl"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                        PahiloKhana
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="all-categories.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-th-large mr-2"></i>Categories
+                    </a>
+                    <a href="about.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-info-circle mr-2"></i>About
+                    </a>
+                    <a href="contact.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                    <button class="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        <i class="fas fa-user mr-2"></i>Sign In
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-orange-500">Home</a>
+                <a href="all-categories.html" class="block py-2 text-gray-700 hover:text-orange-500">Categories</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-orange-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <section class="bg-gradient-to-r from-orange-500 to-red-500 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto mb-6">
+                <div class="flex gap-4">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input 
+                            type="text" 
+                            id="search-input"
+                            placeholder="Search for recipes, ingredients, cuisines..." 
+                            class="w-full pl-12 pr-4 py-4 rounded-full focus:outline-none shadow-lg"
+                            value="momos"
+                        >
+                    </div>
+                    <button class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:shadow-xl transition">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Info -->
+            <div class="text-white text-center">
+                <h1 class="text-3xl font-bold mb-2">Search Results for "momos"</h1>
+                <p class="text-lg opacity-90">Found 24 recipes matching your search</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters & Results -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-4 gap-8">
+            
+            <!-- Filters Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <i class="fas fa-filter text-orange-500"></i>
+                        Filters
+                    </h3>
+
+                    <!-- Category Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">Category</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Mountain Dishes (8)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Hilly Cuisine (12)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Terai Dishes (4)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Difficulty Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">Difficulty</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Easy (15)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Medium (7)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Hard (2)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cooking Time Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">Cooking Time</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Under 30 min (10)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">30-60 min (9)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="text-gray-700">Over 60 min (5)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">Rating</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="flex items-center gap-1 text-gray-700">
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    5 Stars (6)
+                                </span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-orange-500 rounded">
+                                <span class="flex items-center gap-1 text-gray-700">
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    4+ Stars (12)
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Clear Filters -->
+                    <button class="w-full bg-gray-200 text-gray-700 py-2 rounded-xl font-semibold hover:bg-gray-300 transition">
+                        Clear All Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="lg:col-span-3">
+                <!-- Sort Options -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800">24 Results</h2>
+                    <select class="px-4 py-2 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none">
+                        <option>Most Relevant</option>
+                        <option>Newest First</option>
+                        <option>Highest Rated</option>
+                        <option>Most Popular</option>
+                        <option>Quickest</option>
+                    </select>
+                </div>
+
+                <!-- Recipe Cards Grid -->
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    
+                    <!-- Recipe Card Template - COPY THIS -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Mountain Dishes</span>
+                            <h3 class="font-bold text-lg mb-2 text-gray-800">Steamed Momos</h3>
+                            <p class="text-gray-600 text-sm mb-3">Traditional Tibetan dumplings filled with vegetables...</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                <span><i class="far fa-clock mr-1"></i>45 min</span>
+                                <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                                <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.8</span>
+                            </div>
+                            <a href="recipe-detail.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                                View Recipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Recipe Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Hilly Cuisine</span>
+                            <h3 class="font-bold text-lg mb-2 text-gray-800">Fried Momos</h3>
+                            <p class="text-gray-600 text-sm mb-3">Crispy fried dumplings with spicy chutney...</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                <span><i class="far fa-clock mr-1"></i>35 min</span>
+                                <span><i class="fas fa-signal mr-1"></i>Easy</span>
+                                <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.6</span>
+                            </div>
+                            <a href="recipe-detail.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                                View Recipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Recipe Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=80" alt="Recipe" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Ethnic Dishes</span>
+                            <h3 class="font-bold text-lg mb-2 text-gray-800">Jhol Momos</h3>
+                            <p class="text-gray-600 text-sm mb-3">Momos in hot and spicy soup...</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                <span><i class="far fa-clock mr-1"></i>50 min</span>
+                                <span><i class="fas fa-signal mr-1"></i>Medium</span>
+                                <span><i class="fas fa-star text-yellow-400 mr-1"></i>4.9</span>
+                            </div>
+                            <a href="recipe-detail.html" class="block w-full bg-orange-500 text-white text-center py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                                View Recipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Add more recipe cards by copying the template above -->
+                    
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center gap-2 mt-12">
+                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="px-4 py-2 bg-orange-500 text-white rounded-lg">1</button>
+                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">2</button>
+                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">3</button>
+                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                        <span class="text-2xl font-bold">PahiloKhana</span>
+                    </div>
+                    <p class="text-gray-400">Your ultimate destination for discovering authentic Nepali recipes.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="all-categories.html" class="hover:text-orange-500 transition">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Top Regions</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Mountain Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Hilly Cuisine</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Terai Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Newari Cuisine</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PahiloKhana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

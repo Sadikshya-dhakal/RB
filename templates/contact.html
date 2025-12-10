@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PahiloKhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-utensils text-orange-500 text-3xl"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                        PahiloKhana
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    
+                    <a href="latest-news.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-newspaper mr-2"></i>Latest News
+                    </a>
+                    <a href="about.html" class="text-gray-700 font-semibold hover:text-orange-500 transition">
+                        <i class="fas fa-info-circle mr-2"></i>About
+                    </a>
+                    <a href="contact.html" class="text-orange-500 font-semibold hover:text-orange-600 transition">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                    <button class="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                        <i class="fas fa-user mr-2"></i>Sign In
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-orange-500">Home</a>
+                <a href="all-categories.html" class="block py-2 text-gray-700 hover:text-orange-500">Categories</a>
+                <a href="latest-news.html" class="block py-2 text-gray-700 hover:text-orange-500">Latest News</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500">About</a>
+                <a href="contact.html" class="block py-2 text-orange-500 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-500 to-purple-500 py-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <i class="fas fa-envelope text-6xl mb-6"></i>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+                Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Contact Information</h2>
+                
+                <div class="space-y-6">
+                    <!-- Email -->
+                    <div class="flex items-start gap-4">
+                        <div class="bg-orange-100 p-4 rounded-full">
+                            <i class="fas fa-envelope text-orange-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Email</h3>
+                            <p class="text-gray-600">support@pahilokhana.com</p>
+                            <p class="text-gray-600">business@pahilokhana.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-4 rounded-full">
+                            <i class="fas fa-phone text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Phone</h3>
+                            <p class="text-gray-600">+977 01-1234567</p>
+                            <p class="text-gray-600">Sun-Fri, 9am-6pm NPT</p>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-4">
+                        <div class="bg-green-100 p-4 rounded-full">
+                            <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Office</h3>
+                            <p class="text-gray-600">Kathmandu, Nepal</p>
+                            <p class="text-gray-600">Bagmati Province</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="mt-12">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition text-lg">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition text-lg">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition text-lg">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition text-lg">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition text-lg">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map (Optional) -->
+                <div class="mt-12">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">Our Location</h3>
+                    <div class="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
+                        <p class="text-gray-500 text-center">
+                            <i class="fas fa-map-marked-alt text-4xl mb-2"></i><br>
+                            Map will be here
+                        </p>
+                        <!-- You can embed Google Maps here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                <form class="space-y-6">
+                    <!-- Name -->
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Your Name *</label>
+                        <input 
+                            type="text" 
+                            required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition"
+                            placeholder="Enter your full name"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                        <input 
+                            type="email" 
+                            required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition"
+                            placeholder="your@email.com"
+                        >
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition"
+                            placeholder="+977 98xxxxxxxx"
+                        >
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Subject *</label>
+                        <select 
+                            required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition"
+                        >
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="recipe">Recipe Suggestion</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Your Message *</label>
+                        <textarea 
+                            rows="5" 
+                            required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition"
+                            placeholder="Tell us more about how we can help you..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition transform hover:scale-105"
+                    >
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Send Message
+                    </button>
+
+                    <p class="text-sm text-gray-500 text-center">
+                        We'll get back to you within 24 hours
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Frequently Asked Questions</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        How do I submit my own recipe?
+                    </h3>
+                    <p class="text-gray-700">
+                        Simply create an account and click on "Add Recipe" in your dashboard. Follow the step-by-step guide to share your delicious creations with our community!
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        Is the platform free to use?
+                    </h3>
+                    <p class="text-gray-700">
+                        Yes! Basic features are completely free. We also offer premium features with a subscription for enhanced experience and exclusive content.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        Can I save my favorite recipes?
+                    </h3>
+                    <p class="text-gray-700">
+                        Absolutely! Click the heart icon on any recipe to save it to your favorites. You can access them anytime from your profile.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        How do I report inappropriate content?
+                    </h3>
+                    <p class="text-gray-700">
+                        Use the report button on any recipe or comment. You can also contact us directly through this form. We take all reports seriously.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        Can I advertise on PahiloKhana?
+                    </h3>
+                    <p class="text-gray-700">
+                        Yes! We offer various advertising opportunities. Please email business@pahilokhana.com for partnership inquiries.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-orange-500"></i>
+                        How can I contribute to the blog?
+                    </h3>
+                    <p class="text-gray-700">
+                        We love guest contributors! Send us your food stories, cooking tips, or cultural insights via the contact form above.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl p-12 text-white text-center">
+            <h2 class="text-4xl font-bold mb-4">Still Have Questions?</h2>
+            <p class="text-xl mb-8 opacity-90">Don't hesitate to reach out. Our team is here to help!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:support@pahilokhana.com" class="bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-xl transition transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Email Us
+                </a>
+                <a href="tel:+9771234567" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                        <span class="text-2xl font-bold">PahiloKhana</span>
+                    </div>
+                    <p class="text-gray-400">Your ultimate destination for discovering authentic Nepali recipes.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="all-categories.html" class="hover:text-orange-500 transition">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Top Regions</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Mountain Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Hilly Cuisine</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Terai Dishes</a></li>
+                        <li><a href="category.html" class="hover:text-orange-500 transition">Newari Cuisine</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PahiloKhana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
